@@ -3,7 +3,7 @@ import BaseLayout from './BaseLayout.astro';
 
 interface Props {
   title: string;
-  description: string;
+  description?: string;
   pubDate: Date;
   tags: string[];
 }
@@ -17,7 +17,7 @@ const formattedDate = pubDate.toLocaleDateString('ja-JP', {
 });
 ---
 
-<BaseLayout title={`${title} | My Blog`} description={description}>
+<BaseLayout title={`${title} | kapu-blog`} description={description}>
   <article>
     <header class="mb-8 border-b border-gray-200 dark:border-gray-700 pb-8">
       <time class="text-sm text-gray-500 dark:text-gray-400" datetime={pubDate.toISOString()}>

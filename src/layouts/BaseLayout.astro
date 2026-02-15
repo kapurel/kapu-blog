@@ -8,7 +8,7 @@ interface Props {
   description?: string;
 }
 
-const { title, description = 'My Blog - Web開発についての個人ブログ' } = Astro.props;
+const { title, description = 'kapu-blog' } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
